@@ -1,9 +1,9 @@
 require_relative 'pipeline'
+include Storage
 
 pipe = Pipe.new [
-  UpperCase,
-  ReverseChars
+  DetectDelimeter
 ]
 
-result = pipe.run("Working fine!")
-puts result #=> !ENIF GNIKROW
+result = pipe.run("Depeche mode, Eminem, Tiamat, Eminem feat Киркоров, Stacy#flash, Stacy#flash")
+puts Storage.get(:delimeter)
