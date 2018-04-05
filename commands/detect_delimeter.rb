@@ -1,7 +1,7 @@
 class DetectDelimeter < Command
   class << self
 
-    DELIMITERS = [",", ";", "\t", "|", "#"]
+    DELIMITERS = [",", ";", "\t", "|", "#", "-"]
 
     def run(context)
       delimeter = detect(context)
